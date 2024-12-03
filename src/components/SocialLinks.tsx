@@ -26,21 +26,21 @@ const SocialLinks: React.FC<
   Pick<Developer, 'githubLink' | 'twitterLink' | 'linkedinLink'>
 > = ({ githubLink, twitterLink, linkedinLink }) => (
   <div className="card__details-socials">
-    <a href={githubLink}>
+    <a href={githubLink} target="_blank">
       <img
         className="card__details-socials-icon"
         src={githubIcon}
         alt="GitHub Logo"
       />
     </a>
-    <a href={twitterLink}>
+    <a href={twitterLink} target="_blank">
       <img
         className="card__details-socials-icon"
         src={twitterIcon}
         alt="Twitter Logo"
       />
     </a>
-    <a href={linkedinLink}>
+    <a href={linkedinLink} target="_blank">
       <img
         className="card__details-socials-icon"
         src={linkedinIcon}

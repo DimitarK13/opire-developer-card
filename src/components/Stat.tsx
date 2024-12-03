@@ -10,12 +10,12 @@ const Stat: React.FC<StatProps> = ({
   isPrice = false,
 }) => {
   return (
-    <div>
-      <p>
+    <div className="statistic">
+      <p className="statistic__number">
         {isPrice ? '$' : ''}
         {number}
       </p>
-      <p>{description}</p>
+      <p className="statistic__description">{description}</p>
     </div>
   );
 };

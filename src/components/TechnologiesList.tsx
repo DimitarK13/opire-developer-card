@@ -3,7 +3,7 @@ import Badge from './Badge';
 const TechnologiesList: React.FC<{ technologies: string[] }> = ({
   technologies,
 }) => (
-  <div>
+  <div className="card__details-technologies">
     {technologies.map((tech, index) => (
       <Badge key={index}>{tech}</Badge>
     ))}

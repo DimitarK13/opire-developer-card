@@ -82,7 +82,16 @@ const Card: React.FC<CardProps> = ({ developer }) => {
           <ResolvedChallengesList challenges={developer.resolvedChallenges} />
         </div>
 
-        <a className="card__info-share" href="#">
+        <a
+          className="card__info-share"
+          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+            window.location.href
+          )}&text=${encodeURIComponent(
+            `Check out ${developer.name}'s profile on our platform!`
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={shareIcon} alt="Share Icon" />
         </a>
       </div>

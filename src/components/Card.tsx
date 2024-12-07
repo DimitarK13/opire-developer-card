@@ -46,7 +46,7 @@ const Card: React.FC<CardProps> = ({ developer }) => {
     const rotateY = (x / cardRect.width) * 20;
 
     setStyle({
-      transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+      transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`,
     });
   };
 

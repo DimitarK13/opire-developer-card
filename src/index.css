@@ -121,6 +121,10 @@ main {
     linear-gradient(45deg, var(--primary-clr), var(--secondary-clr)) border-box;
   border-radius: 20px;
   border: 1px solid transparent;
+
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform 0.2s ease-out;
 }
 
 .card__line {

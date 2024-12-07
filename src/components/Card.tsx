@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Badge from './Badge';
 import SocialLinks from './SocialLinks';
 
@@ -31,8 +33,37 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ developer }) => {
+  const [style, setStyle] = useState<React.CSSProperties>({});
+
+  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (event) => {
+    const card = event.currentTarget;
+    const cardRect = card.getBoundingClientRect();
+
+    const x = event.clientX - cardRect.left - cardRect.width / 2;
+    const y = event.clientY - cardRect.top - cardRect.height / 2;
+
+    const rotateX = (y / cardRect.height) * -15;
+    const rotateY = (x / cardRect.width) * 15;
+
+    setStyle({
+      transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    });
+  };
+
+  const handleMouseLeave: React.MouseEventHandler<HTMLDivElement> = () => {
+    setStyle({
+      transform: 'rotateX(0deg) rotateY(0deg)',
+      transition: 'transform 0.3s ease-out',
+    });
+  };
+
   return (
-    <div className="card">
+    <div
+      className="card"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={style}
+    >
       <div className="card__details">
         <div>
           <div className="card__details-top">

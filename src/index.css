@@ -13,8 +13,6 @@ body {
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #242424;
-  color: #cacaca;
 }
 
 ul[class],
@@ -52,24 +50,57 @@ select {
   }
 }
 
+main.theme--dark {
+  --bg-clr: #242424;
+  --text-primary: #cacaca;
+  --text-secondary: #808080;
+
+  --primary-clr: #00ba8a;
+  --secondary-clr: #2399a6;
+}
+
+main.theme--light {
+  --bg-clr: #ffffff;
+  --text-primary: #5e5e5e;
+  --text-secondary: #808080;
+
+  --primary-clr: #00ba8a;
+  --secondary-clr: #2399a6;
+}
+
 main {
   display: grid;
   min-height: 100vh;
   place-items: center;
   padding: 24px;
+  background-color: var(--bg-clr);
+  color: var(--text-primary);
 }
 
 .developers {
+  padding: 28px;
+
+  position: absolute;
+  left: 40px;
+  top: 40px;
+
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   gap: 12px;
+
+  background-color: hsl(0, 0%, 17%);
+  border-radius: 12px;
+}
+
+.developers h5 {
+  color: #fff;
 }
 
 .developers button {
   cursor: pointer;
   padding: 4px 16px;
-  background-color: #00ba8a;
+  background-color: var(--primary-clr);
+  color: #fff;
   border: 0;
   border-radius: 6px;
 }
@@ -86,8 +117,9 @@ main {
   height: auto;
   padding: 16px;
 
-  background: linear-gradient(#242424, #242424) padding-box,
-    linear-gradient(to right bottom, #00ba8a, #2399a6) border-box;
+  background: linear-gradient(var(--bg-clr), var(--bg-clr)) padding-box,
+    linear-gradient(to right top, var(--primary-clr), var(--secondary-clr))
+      border-box;
   border-radius: 20px;
   border: 1px solid transparent;
 }
@@ -97,7 +129,7 @@ main {
   height: 1px;
   background-image: linear-gradient(
     to right,
-    #808080 50%,
+    var(--text-secondary) 50%,
     rgba(255, 255, 255, 0) 0%
   );
   background-position: bottom;
@@ -136,7 +168,7 @@ main {
 
 .card__details-date {
   font-size: 11px;
-  color: #808080;
+  color: var(--text-secondary);
 }
 
 .statistic {
@@ -149,8 +181,12 @@ main {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
-  color: #00ba8a;
-  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+  color: var(--primary-clr);
+  background: linear-gradient(
+    to right top,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -161,7 +197,7 @@ main {
 
 .badge {
   display: inline-block;
-  background: #00ba8a;
+  background: var(--primary-clr);
   color: #fff;
   padding: 4px 10px;
   border-radius: 8px;
@@ -169,7 +205,11 @@ main {
 }
 
 .badge.bg-gradient {
-  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+  background: linear-gradient(
+    to right top,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
 }
 
 .card__details-technologies {
@@ -205,7 +245,7 @@ main {
 .card__info-position {
   margin-bottom: 20px;
   font-size: 12px;
-  color: #808080;
+  color: var(--text-secondary);
 }
 
 .card__info-challenges-title {
@@ -223,13 +263,17 @@ main {
 
 .card__info-challenges-items {
   font-size: 14px;
-  color: #808080;
+  color: var(--text-secondary);
 }
 
 .card__info-share {
   padding: 4px;
   border-radius: 8px;
-  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+  background: linear-gradient(
+    to right top,
+    var(--primary-clr),
+    var(--secondary-clr)
+  );
 
   margin-top: 24px;
   margin-left: auto;
@@ -264,7 +308,10 @@ main {
   .card__line {
     width: 1px;
     height: 100%;
-    background-image: linear-gradient(#808080 50%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(
+      var(--text-secondary) 50%,
+      rgba(255, 255, 255, 0) 0%
+    );
     background-position: right;
     background-size: 1px 20px;
     background-repeat: repeat-y;

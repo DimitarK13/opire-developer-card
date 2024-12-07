@@ -7,7 +7,7 @@ const ResolvedChallengesList: React.FC<{ challenges: string[] }> = ({
     )}
     {challenges.map((challenge, index) => (
       <li key={index} className="card__info-challenges-items">
-        {challenge}
+        {challenge.length > 35 ? `${challenge.slice(0, 35)}...` : challenge}
       </li>
     ))}
   </ol>

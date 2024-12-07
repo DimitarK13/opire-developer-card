@@ -12,7 +12,7 @@ export const developers = [
     topContributor: true,
     resolvedChallenges: [
       'Bug Fix Marathon',
-      'Frontend Redesign Challenge',
+      'Frontend Redesign Challenge By Edward Steward',
       'API Integration Contest',
     ],
     statistics: [

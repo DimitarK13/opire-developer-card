@@ -34,25 +34,35 @@ const Card: React.FC<CardProps> = ({ developer }) => {
   return (
     <div className="card">
       <div className="card__details">
-        <img
-          className="card__details-picture"
-          src={developer.image}
-          alt={developer.name}
-        />
-
-        <div className="card__details-info">
-          <p className="card__details-date">Joined: {developer.joinedDate}</p>
-
-          <div className="card__details-socials">
-            <SocialLinks
-              githubLink={developer.githubLink}
-              twitterLink={developer.twitterLink}
-              linkedinLink={developer.linkedinLink}
+        <div>
+          <div className="card__details-top">
+            <img
+              className="card__details-picture"
+              src={developer.image}
+              alt={developer.name}
             />
-          </div>
-        </div>
 
-        <StatisticsList statistics={developer.statistics} />
+            <div className="card__details-wrap">
+              <div className="card__details-info">
+                <p className="card__details-date">
+                  Joined: {developer.joinedDate}
+                </p>
+
+                <div className="card__details-socials">
+                  <SocialLinks
+                    githubLink={developer.githubLink}
+                    twitterLink={developer.twitterLink}
+                    linkedinLink={developer.linkedinLink}
+                  />
+                </div>
+              </div>
+
+              <StatisticsList statistics={developer.statistics} />
+            </div>
+          </div>
+
+          <StatisticsList statistics={developer.statistics} />
+        </div>
 
         <TechnologiesList technologies={developer.technologies} />
       </div>

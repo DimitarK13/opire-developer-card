@@ -13,6 +13,8 @@ body {
   line-height: 1.5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #242424;
+  color: #cacaca;
 }
 
 ul[class],
@@ -47,5 +49,258 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.developers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.developers button {
+  cursor: pointer;
+  padding: 4px 16px;
+  background-color: #00ba8a;
+  border: 0;
+  border-radius: 6px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
+
+  width: 100%;
+  max-width: 362px;
+  height: auto;
+  padding: 16px;
+
+  background: linear-gradient(#242424, #242424) padding-box,
+    linear-gradient(to right bottom, #00ba8a, #2399a6) border-box;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.card__line {
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    #808080 50%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 20px 1px;
+  background-repeat: repeat-x;
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card__details-top {
+  display: flex;
+  gap: 20px;
+}
+
+.card__details-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card__details-socials {
+  display: flex;
+  gap: 6px;
+}
+
+.card__details-socials-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.card__details-date {
+  font-size: 11px;
+  color: #808080;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statistic__number {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #00ba8a;
+  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.statistic__description {
+  font-size: 11px;
+}
+
+.badge {
+  display: inline-block;
+  background: #00ba8a;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.badge.bg-gradient {
+  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+}
+
+.card__details-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card__details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card__info .badge {
+  position: absolute;
+  top: calc(0% - 12.25px);
+  right: 14px;
+}
+
+.card__info-name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.card__info-position {
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #808080;
+}
+
+.card__info-challenges-title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.card__info-challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.card__info-challenges-items {
+  font-size: 14px;
+  color: #808080;
+}
+
+.card__info-share {
+  padding: 4px;
+  border-radius: 8px;
+  background: linear-gradient(to right bottom, #00ba8a, #2399a6);
+
+  margin-top: 24px;
+  margin-left: auto;
+}
+
+.card__details-stats {
+  display: none;
+}
+
+.card__details-top .card__details-stats {
+  margin-top: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.card__details-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+@media (min-width: 681px) {
+  .card {
+    flex-direction: row;
+    height: 300px;
+    max-width: 620px;
+    padding: 20px;
+  }
+
+  .card__line {
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient(#808080 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: right;
+    background-size: 1px 20px;
+    background-repeat: repeat-y;
+  }
+
+  .card__details {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 215px;
+    flex-shrink: 0;
+  }
+
+  .card__details-top {
+    gap: 10px;
+  }
+
+  .card__details-top .card__details-stats {
+    display: none;
+  }
+
+  .card__details-stats {
+    margin-top: 12px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .card__info .badge {
+    right: 30px;
+  }
+
+  .card__info-share {
+    margin-top: auto;
+  }
+
+  .card__details-picture {
+    width: 100px;
+    height: 100px;
   }
 }

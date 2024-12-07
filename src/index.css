@@ -118,8 +118,7 @@ main {
   padding: 16px;
 
   background: linear-gradient(var(--bg-clr), var(--bg-clr)) padding-box,
-    linear-gradient(to right top, var(--primary-clr), var(--secondary-clr))
-      border-box;
+    linear-gradient(45deg, var(--primary-clr), var(--secondary-clr)) border-box;
   border-radius: 20px;
   border: 1px solid transparent;
 }
@@ -182,11 +181,7 @@ main {
   font-weight: 600;
   line-height: 1.1;
   color: var(--primary-clr);
-  background: linear-gradient(
-    to right top,
-    var(--primary-clr),
-    var(--secondary-clr)
-  );
+  background: linear-gradient(45deg, var(--primary-clr), var(--secondary-clr));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -205,11 +200,7 @@ main {
 }
 
 .badge.bg-gradient {
-  background: linear-gradient(
-    to right top,
-    var(--primary-clr),
-    var(--secondary-clr)
-  );
+  background: linear-gradient(45deg, var(--primary-clr), var(--secondary-clr));
 }
 
 .card__details-technologies {
@@ -269,11 +260,7 @@ main {
 .card__info-share {
   padding: 4px;
   border-radius: 8px;
-  background: linear-gradient(
-    to right top,
-    var(--primary-clr),
-    var(--secondary-clr)
-  );
+  background: linear-gradient(45deg, var(--primary-clr), var(--secondary-clr));
 
   margin-top: 24px;
   margin-left: auto;

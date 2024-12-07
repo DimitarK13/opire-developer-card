@@ -19,7 +19,7 @@ function App() {
     <main className={`theme--${isDarkMode ? 'dark' : 'light'}`}>
       <Card developer={developers[developerIndex]} />
 
-      <div className="developers">
+      <div className="options">
         <h5>Toggle Dark Mode</h5>
         <button onClick={toggleDarkMode}>Toggle</button>
 

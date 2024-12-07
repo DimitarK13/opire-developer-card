@@ -77,7 +77,7 @@ main {
   color: var(--text-primary);
 }
 
-.developers {
+.options {
   padding: 28px;
 
   position: absolute;
@@ -92,11 +92,11 @@ main {
   border-radius: 12px;
 }
 
-.developers h5 {
+.options h5 {
   color: #fff;
 }
 
-.developers button {
+.options button {
   cursor: pointer;
   padding: 4px 16px;
   background-color: var(--primary-clr);
@@ -349,5 +349,15 @@ main {
   .card__details-picture {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  main {
+    gap: 40px;
+  }
+
+  .options {
+    position: static;
   }
 }

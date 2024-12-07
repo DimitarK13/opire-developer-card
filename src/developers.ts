@@ -31,13 +31,10 @@ export const developers = [
     name: 'Michael Brown',
     position: 'Backend Engineer',
     topContributor: false,
-    resolvedChallenges: [
-      'Database Optimization Challenge',
-      'Security Patch Deployment',
-    ],
+    resolvedChallenges: [],
     statistics: [
-      { number: 15, description: 'Issues Resolved', isPrice: false },
-      { number: 320, description: 'Money Earned', isPrice: true },
+      { number: 0, description: 'Issues Resolved', isPrice: false },
+      { number: 0, description: 'Money Earned', isPrice: true },
     ],
   },
   {
